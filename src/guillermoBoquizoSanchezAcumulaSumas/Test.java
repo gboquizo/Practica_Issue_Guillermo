@@ -13,7 +13,31 @@ import java.util.InputMismatchException;
 import java.util.NoSuchElementException;
 
 
-
+/**
+ *
+ * 
+ * TestAcumulaSumas Este programa realiza sumas acumuladas de enteros bajo los
+ * siguientes requisitos:
+ * 
+ * Recuerda identificarlo todo correctamente Paquete
+ * nombreApellido1Apellido2AcumulaSumas @author en javadoc Inicialmente se parte
+ * del entero almacenado en un fichero txt. Si el fichero no existe, se parte
+ * desde 0. El programa continúa pidiendo al usuario números enteros y los suma,
+ * hasta que el usuario introduce en número 0. Una vez hecha la suma, el
+ * resultado se almacenará en el mismo fichero txt Detalles del programa: No
+ * utilices la clase Teclado En el caso en que el usuario introduzca por teclado
+ * un valor no válido (no es un entero) se le informa del error y se solicita de
+ * nuevo (utiliza excepciones) En el caso en que al leer del fichero el dato no
+ * sea correcto (no es un entero) se informa del error y se comienza desde 0.
+ * 
+ * Junto con el programa, entrega un "flujosE-S.pdf" que contenga:
+ * 
+ * Flujos de E/S utilizados Clases y métodos que se utilizan
+ * 
+ * @author Guillermo Boquizo Sánchez
+ * @version 1.0
+ *
+ */
 public class Test {
 
 	private static Scanner sc;
@@ -64,7 +88,10 @@ public class Test {
 		} while (utiles.DeseaContinuar.deseaContinuar());
 	}
 	
-	
+	/**
+	 * Método que gestiona la lectura en archivo
+	 * @return recuento recuento de datos leídos
+	 */
 	private static int leer() {
 		Scanner leer = null;
 		int recuento = 0;
@@ -82,7 +109,10 @@ public class Test {
 
 	}
 
-
+	/**
+	 * Método que permite gestionar la escritura en archivo
+	 * @throws IOException
+	 */
 	private static void escribir() throws IOException {
 		PrintWriter escribir = null;
 		try {
